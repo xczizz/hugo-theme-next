@@ -30,6 +30,9 @@ DefaultContentLanguage = "zh"
   #QQStatsId = "58416275"
   RevolverMapId = "5b4f2ucxar6"
   Fancybox = true
+  # next 加载文章的时候动画效果
+  NextMotion = false
+  icp = ""
 
 [Author]
   Name = "兰陵子"

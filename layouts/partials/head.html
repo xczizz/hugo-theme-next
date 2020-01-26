@@ -10,11 +10,11 @@
     {{ with .Site.Author.Name }}<meta name="author" content="{{ . }}">{{ end }}
     <meta property="og:title" content="{{ if ne .Permalink " / " }}{{ .Title }}{{else}}{{ .Site.Title }}{{end}}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
-    <meta property="og:image" content="/img/author.jpg"> 
+    <meta property="og:image" content="{{ with .Site.Params.AuthorImg}}{{ . }}{{ else }} /img/author.jpg {{end}}"> 
     <meta name="title" content="{{ if ne .Permalink " / " }}{{ .Title }} - {{ end }}{{ .Site.Title }}" />
     {{ with .Description }}<meta name="description" content="{{ . }}" />
     {{ else }}<meta name="description" content="{{ .Site.Params.Description }}">{{ end }} 
-    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="shortcut icon" href="{{ with .Site.Params.Favicon}}{{ . }}{{ else }} /img/favicon.ico {{end}}" />
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
     <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon.png" />
     <link href="/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
@@ -27,7 +27,7 @@
     scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     {{ if and .Site.Params.Fancybox .IsPage}} fancybox: true, {{else }}fancybox: false, {{ end }}
-    motion: true
+    {{ if and .Site.Params.NextMotion .IsPage}} motion: true, {{else }}motion: false {{end}}
   };
 </script>
 </head>
