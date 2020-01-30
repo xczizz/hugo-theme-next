@@ -15,6 +15,7 @@ PygmentsStyle = "monokai"
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 DefaultContentLanguage = "zh"
+enableRobotsTXT = false
 
 [Params]
   Introduce = "Programmer & Architect"
@@ -28,6 +29,7 @@ DefaultContentLanguage = "zh"
   MonthFormat = "01-02"
   #BaiduStatsId = "0b07433b4ab8d587dae7d34e71973839"
   #QQStatsId = "58416275"
+  BaiduSiteVerify = ""
   RevolverMapId = "5b4f2ucxar6"
   Fancybox = true
   # next 加载文章的时候动画效果
@@ -86,3 +88,13 @@ DefaultContentLanguage = "zh"
   Name = "知乎"
   Icon = "globe"
   URL = "https://www.zhihu.com/people/lan-ling-xin-yun"  
+
+# Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
+# they have to be referred from static root. Example
+#[[params.customCSS]]
+#    href = "css/custom.css"
+
+# Custom JS. Put here your custom JS files. They are loaded after the theme JS;
+# they have to be referred from static root. Example
+# [[params.customJS]]
+#   src = "js/myscript.js"

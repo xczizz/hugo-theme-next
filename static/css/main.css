@@ -304,9 +304,10 @@ hr {
   background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
 }
 blockquote {
+  background-color: #f2f2f2;
   padding: 0 15px;
   color: #666;
-  border-left: 4px solid #ddd;
+  border-left: 5px solid #b3b3b3;
 }
 blockquote cite::before {
   content: "-";
@@ -492,11 +493,12 @@ pre,
 .highlight {
   overflow: auto;
   margin: 20px 0;
-  padding: 0;
+  padding: 10px;
   font-size: 13px;
-  color: #4d4d4c;
-  background: #f7f7f7;
+  /* color: #4d4d4c; */
+  background: #282c34;
   line-height: 1.6;
+  border: 1px solid #d9d9d9;
 }
 pre,
 code {
@@ -505,14 +507,14 @@ code {
 code {
   padding: 2px 4px;
   word-break: break-all;
-  color: #555;
+  /* color: #555; */
   background: #eee;
   border-radius: 4px;
   font-size: 13px;
 }
 pre code {
   padding: 0;
-  color: #4d4d4c;
+  /* color: #4d4d4c; */
   background: none;
   text-shadow: none;
 }
@@ -1026,7 +1028,6 @@ pre .javascript .function {
   cursor: zoom-in;
   cursor: -webkit-zoom-in;
 }
-.post-body .image-caption,
 .post-body .figure .caption {
   margin: 10px auto 15px;
   text-align: center;
@@ -1034,6 +1035,18 @@ pre .javascript .function {
   color: #999;
   font-weight: bold;
   line-height: 1;
+}
+.post-body .image-caption {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 auto;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 13px;
+  color: #999;
+  line-height: 1.2;
+}
+.post-body .image-caption-border {
+  text-align: center;
 }
 .post-sticky-flag {
   display: inline-block;
@@ -2344,7 +2357,7 @@ body {
 .content-wrap {
   float: right;
   box-sizing: border-box;
-  padding: 40px;
+  padding: 20px;
   width: 860px;
   background: #fff;
   min-height: 700px;

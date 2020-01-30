@@ -51,3 +51,11 @@
   });
 </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+<!--CUSTOM JS-->
+{{ range .Site.Params.customJS }}
+  {{ if isset . "src" }}
+    <script{{ range $key, $value := . }} {{ if eq $key "src" }}{{ (printf "%s=\"%s\"" $key ($value | absURL)) | safeHTMLAttr }}{{ else if and (in "async defer" $key) }}{{ if $value }}{{ (printf "%s" $key) | safeHTMLAttr }}{{ end }}{{ else }}{{ (printf "%s=\"%s\"" $key (string $value)) | safeHTMLAttr }}{{ end }}{{ end }}></script>
+  {{ else }}
+    <script src="{{ . | absURL }}"></script>
+  {{ end }}
+{{ end }}
